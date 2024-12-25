@@ -1,0 +1,6 @@
+DealID,DealName,DealStage,DealValue,CloseProbability,ExpectedCloseDate,Outcome
+1,Deal A,Qualification,5000,0.3,1/15/2024,Won
+2,Deal B,Proposal,12000,0.6,2/20/2024,Lost
+3,Deal C,Negotiation,15000,0.8,3/10/2024,Pending
+4,Deal D,Qualification,8000,0.4,1/25/2024,Lost
+5,Deal E,Closing,20000,0.9,1/30/2024,Won
