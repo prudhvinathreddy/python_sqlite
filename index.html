@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python SQLite Practice</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f7;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #222;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #0073e6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #005bb5;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 4px solid #0073e6;
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Python SQLite Practice</h1>
+        <p>This repository contains practice exercises and examples for working with SQLite databases in Python. It is a resource for those looking to understand how to interact with SQLite using Python's <code>sqlite3</code> module.</p>
+
+        <div class="section">
+            <h2>About This Project</h2>
+            <p>This repository contains a set of Python scripts that demonstrate how to use the SQLite database with Python's built-in <code>sqlite3</code> module. It's aimed at beginners and those looking to practice working with SQLite in Python.</p>
+			<h4><a href="https://github.com/prudhvinathreddy/python_sqlite" target="_blank">Access all code files here</a></h4>
+        </div>
+
+        <div class="section">
+            <h2>Contents</h2>
+            <ul>
+                <li><strong>sales-pipeline</strong>: A directory containing scripts and data related to managing a sales pipeline using SQLite.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Getting Started</h2>
+            <ol>
+                <li>Clone the repository:
+                    <pre>git clone https://github.com/prudhvinathreddy/python_sqlite.git</pre>
+                </li>
+                <li>Navigate to the project directory:
+                    <pre>cd python_sqlite</pre>
+                </li>
+                <li>Explore the <code>sales-pipeline</code> directory:
+                    <pre>cd sales-pipeline</pre>
+                </li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Usage</h2>
+            <p>Each script is designed to be run individually. For example, to execute a script:</p>
+            <pre>python script_name.py</pre>
+            <p>Replace <code>script_name.py</code> with the name of the script you wish to run.</p>
+        </div>
+
+        <div class="section">
+            <h2>Relationship Between Pandas and SQLite</h2>
+            <p>Pandas and SQLite are commonly used together in data science and analysis workflows. While SQLite is a lightweight relational database management system (RDBMS) that stores data in tables and allows SQL queries, Pandas is a powerful data manipulation library in Python that provides data structures like DataFrames for efficient data analysis.</p>
+            
+            <h3>How Pandas and SQLite Work Together</h3>
+            <p>SQLite databases can be used as a source for data that you want to manipulate and analyze using Pandas. You can execute SQL queries on an SQLite database to extract data and load it directly into a Pandas DataFrame for further analysis. This combination is ideal for scenarios where you need to work with large datasets that are stored in a database.</p>
+
+            <h3>Typical Use Cases</h3>
+            <ul>
+                <li><strong>Data Extraction:</strong> You can extract data from an SQLite database and load it into a Pandas DataFrame for analysis. This allows for easy data manipulation, filtering, and aggregation using Pandas’ rich functionality.</li>
+                <li><strong>Data Insertion:</strong> After processing the data in Pandas, you can insert the transformed data back into an SQLite database. This is useful for saving the results of your analysis or preparing data for further use in applications.</li>
+                <li><strong>Efficient Data Analysis:</strong> SQLite provides a fast and efficient way to store large datasets, while Pandas offers powerful tools to manipulate, clean, and visualize the data.</li>
+            </ul>
+
+            <h3>Example Code</h3>
+            <pre><code>
+import sqlite3
+import pandas as pd
+
+# Connect to SQLite database
+conn = sqlite3.connect('example.db')
+
+# Extract data from SQLite into a Pandas DataFrame
+df = pd.read_sql_query("SELECT * FROM sales_data", conn)
+
+# Perform data manipulation with Pandas
+df['total_sales'] = df['quantity'] * df['price']
+
+# Display the DataFrame
+print(df)
+
+# Close the connection
+conn.close()
+            </code></pre>
+        </div>
+
+        <div class="section">
+            <h2>Contributing</h2>
+            <p>Contributions are welcome! If you have improvements or additional examples, feel free to fork the repository and submit a pull request.</p>
+        </div>
+
+        <div class="section">
+            <h2>License</h2>
+            <p>This project is open-source and available under the <a href="https://github.com/prudhvinathreddy/python_sqlite/blob/main/LICENSE" target="_blank">MIT License</a>.</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Prudhvinath Reddy. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
